@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6784F884-F1ED-9000-6B39-290022A4AAEF" name="TRATAMIENTO-PACIENTE">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>59B948B1-C86D-AA5D-EE09-151D37ECB7E1</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idTratamientoPaciente" id="1962E764-835A-5922-DA64-14007F482DA2">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>32CCA9F0-FE4A-C2FB-8E49-D3266E58BEF9</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FechaTratamiento" id="31D4661F-2A90-A517-A87E-8BBA53B13A88">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>9CB9B637-4F30-4D97-6BFE-E4421445E16C</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TRATAMIENTO_idTratamiento" id="C01D872F-7A32-6499-F3D9-FF1667A1EC99">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>DBFFD34C-C17C-C5AD-F3CA-7A8A33B88F59</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DA52A670-FABF-62D7-16C6-4FD8A1DAFBBD" referredColumn="817F533E-58E9-E7D7-A72D-C5A334FE8152"/>
+</associations>
+</Column>
+<Column name="PACIENTE_idPaciente" id="FF6F3599-AC4B-181C-B0E5-11152C46D211">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>2B871B0F-F980-726C-F35F-FCF863622635</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="079A70EB-0B9F-2B88-708B-760614B681DD" referredColumn="F3F7BD84-573F-FB03-BADD-A63C70474877"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="24A2C4B4-246A-9F77-B189-224CE7815093" name="TRATAMIENTO-PACIENTE_PK">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>D7898A8E-F202-12D1-7B48-A121DB0491C8</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1962E764-835A-5922-DA64-14007F482DA2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4CB66AF9-BF72-9C95-E3AC-1A7895BF28CD" name="TRATAMIENTO-PACIENTE_PACIENTE_FK">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>8AB466A5-7B4A-DC41-DC58-F878D2A1F4D5</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FF6F3599-AC4B-181C-B0E5-11152C46D211"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="77EC417E-DFCF-C2AB-DC55-7841E3D4DF33" name="TRATAMIENTO-PACIENTE_TRATAMIENTO_FK">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>AD559F79-108B-DA30-4550-A7DFBA8BAD69</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C01D872F-7A32-6499-F3D9-FF1667A1EC99"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2EBA0866-D51C-A3EC-2CEF-451E65C27968" name="EVALUACION">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>3D8EC746-F67B-D034-7DD9-5797F6CE5148</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idEvaluacion" id="EC522885-B6BF-C50B-A8AF-4F2125B77568">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>37E75CD7-97EC-DB84-D65A-730C54116E4F</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FechaEvaluacion" id="BFB90151-F52B-A207-B1DC-3684C5B3A0D3">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>B91092A0-1031-16F7-1859-E1B4935FC2F7</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SINTOMA_idSintoma" id="B8E4900F-066C-7316-AA1F-D9EED30DD866">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>DF2FB9ED-7F3C-F484-9776-DA967A0AAB09</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7F51109F-29C0-7F73-7957-987444C4CA6C" referredColumn="053C1016-1458-7590-6AB9-EBE351F87342"/>
+</associations>
+</Column>
+<Column name="EMPLEADO_idEmpleado" id="CE9532A4-B0E7-FDC6-4D17-5DC1CB5AC8EA">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>B45EA67F-8F59-184A-5BD9-A30590737DA5</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4F7DC360-1A44-874E-1813-5F536400B7F2" referredColumn="E5ABABF7-6788-F04F-17E0-46FD85C3421A"/>
+</associations>
+</Column>
+<Column name="PACIENTE_idPaciente" id="2BB82A0C-E7E4-1900-9BB7-FB7EE31D3A65">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>0496B378-D122-2FF6-9FCD-C73ADA320DE0</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F18529AF-A5B4-F995-F2D8-F6BEFA585A37" referredColumn="F3F7BD84-573F-FB03-BADD-A63C70474877"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="163E98DF-3F5A-779F-DA61-C362C8A6A5BD" name="EVALUACION_PK">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>8A6AD097-A6F6-A11B-4DA1-2AB9E867FF11</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EC522885-B6BF-C50B-A8AF-4F2125B77568"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7EC2F9B1-B5DE-92D7-A3EC-7D4A4768AF68" name="EVALUACION_EMPLEADO_FK">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>EFBD1B4F-A32D-A444-D2F0-83B9343E5ABE</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CE9532A4-B0E7-FDC6-4D17-5DC1CB5AC8EA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C60D030B-83F4-6691-CE20-7BF8F47BC9A2" name="EVALUACION_SINTOMA_FK">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>76AF99FB-575C-BB0A-86AA-CE9A58083809</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B8E4900F-066C-7316-AA1F-D9EED30DD866"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="185873CB-8193-0561-A0D8-A1486FDF246D" name="EVALUACION_PACIENTE_FK">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>BF32D27E-15E9-84AB-C290-CEC7B7525120</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2BB82A0C-E7E4-1900-9BB7-FB7EE31D3A65"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

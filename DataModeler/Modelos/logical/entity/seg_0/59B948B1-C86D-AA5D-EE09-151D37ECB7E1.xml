@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="59B948B1-C86D-AA5D-EE09-151D37ECB7E1" name="TRATAMIENTO-PACIENTE">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:16:01 UTC</createdTime>
+<ownerDesignName>Modelos</ownerDesignName>
+<engineerTo>
+<item key="8A178BEE-D57C-945A-4CEF-B5E8DB764BF3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="idTratamientoPaciente" id="32CCA9F0-FE4A-C2FB-8E49-D3266E58BEF9">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:16:25 UTC</createdTime>
+<ownerDesignName>Modelos</ownerDesignName>
+<engineerTo>
+<item key="8A178BEE-D57C-945A-4CEF-B5E8DB764BF3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FechaTratamiento" id="9CB9B637-4F30-4D97-6BFE-E4421445E16C">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:16:46 UTC</createdTime>
+<ownerDesignName>Modelos</ownerDesignName>
+<engineerTo>
+<item key="8A178BEE-D57C-945A-4CEF-B5E8DB764BF3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idTratamiento" id="DBFFD34C-C17C-C5AD-F3CA-7A8A33B88F59">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:18:03 UTC</createdTime>
+<generatorID>AD559F79-108B-DA30-4550-A7DFBA8BAD69</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<engineerTo>
+<item key="8A178BEE-D57C-945A-4CEF-B5E8DB764BF3" value="true"/>
+</engineerTo>
+<referedAttribute>7BB1DD83-2A1E-8067-1CAB-70034F8DAC9F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idPaciente" id="2B871B0F-F980-726C-F35F-FCF863622635">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:19:00 UTC</createdTime>
+<generatorID>8AB466A5-7B4A-DC41-DC58-F878D2A1F4D5</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<engineerTo>
+<item key="8A178BEE-D57C-945A-4CEF-B5E8DB764BF3" value="true"/>
+</engineerTo>
+<referedAttribute>DD02062B-E188-6638-A81C-5ED17D144F60</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D7898A8E-F202-12D1-7B48-A121DB0491C8" name="TRATAMIENTO-PACIENTE PK">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:16:44 UTC</createdTime>
+<ownerDesignName>Modelos</ownerDesignName>
+<engineerTo>
+<item key="8A178BEE-D57C-945A-4CEF-B5E8DB764BF3" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>32CCA9F0-FE4A-C2FB-8E49-D3266E58BEF9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

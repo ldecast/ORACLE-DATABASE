@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_Paciente_Evaluacion" directorySegmentName="seg_0" id="BF32D27E-15E9-84AB-C290-CEC7B7525120">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:20:51 UTC</createdTime>
+<ownerDesignName>Modelos</ownerDesignName>
+<engineerTo>
+<item key="8A178BEE-D57C-945A-4CEF-B5E8DB764BF3" value="true"/>
+</engineerTo>
+<sourcePk>C3D8070C-5FF3-8EC1-4338-D481EB9BDEA1</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>96B5CEFB-892E-6434-6CFD-660042F29098</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>3D8EC746-F67B-D034-7DD9-5797F6CE5148</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

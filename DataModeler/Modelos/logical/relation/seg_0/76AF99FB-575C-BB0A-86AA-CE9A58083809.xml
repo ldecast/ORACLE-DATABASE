@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_Evaluacion_Sintoma" directorySegmentName="seg_0" id="76AF99FB-575C-BB0A-86AA-CE9A58083809">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:01:34 UTC</createdTime>
+<ownerDesignName>Modelos</ownerDesignName>
+<engineerTo>
+<item key="8A178BEE-D57C-945A-4CEF-B5E8DB764BF3" value="true"/>
+</engineerTo>
+<sourcePk>1787CBF6-8B1D-AF70-88C2-CEC31FA10823</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>1ACEE55A-FC5D-01A0-187B-32E8747064BE</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>3D8EC746-F67B-D034-7DD9-5797F6CE5148</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

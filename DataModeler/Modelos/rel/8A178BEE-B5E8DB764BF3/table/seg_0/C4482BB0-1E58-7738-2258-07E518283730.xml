@@ -1,0 +1,135 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C4482BB0-1E58-7738-2258-07E518283730" name="EMPLEADO">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>D77B78EE-AC4C-2480-A3BF-8167E87954EE</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idEmpleado" id="E5ABABF7-6788-F04F-17E0-46FD85C3421A">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>25861077-A75A-1419-99CA-C7D3524B441B</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nombre" id="A36F4001-6A78-69D5-FE3D-6AE6B1D16BC4">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>20A261C3-CAD3-232F-AB80-002850BE4C91</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Apellido" id="216D1F4F-54FF-148A-DB5A-6A1986950AE3">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>572AFD15-12A9-AFE4-6A05-75032E8F2E43</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Direccion" id="A7E2EF88-DA51-6C95-A9C5-7572130400A2">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>3810667B-A9D1-7916-78FB-494DE3ECD1CE</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Telefono" id="D78A8B81-971F-56EE-9684-DBA79B0D4753">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>14FE3245-D670-B1C3-7AC7-74007912A4B0</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Genero" id="C485E8FE-24A6-F8C1-1205-7538A291A2C7">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>4CD92AE1-9A36-AE2D-3BA3-7A3437039BC2</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FechaNacimiento" id="555A8EB7-BF15-89C7-6E19-C9AAA5E0A11D">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>DB47A095-69C4-E6AD-4B3F-02AC1ED2F260</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PROFESION_idProfesion" id="46F1AD71-CECD-4F17-E456-DBC79989D537">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>5F353738-3BB4-9111-BC1A-BAE946BFCEAC</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EC0A6CE9-5E23-BD13-4644-BA43364AD54E" referredColumn="0C2606F4-8633-C888-D9E1-363C182A7F09"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BB114A1B-EC3B-5948-B76F-BF4A2C2B1C62" name="EMPLEADO_PK">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>9EE79392-96A3-E2EE-8CD3-FD935F2BB3F5</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E5ABABF7-6788-F04F-17E0-46FD85C3421A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="145BDF85-754E-3D5C-6B9F-0413D8C3D407" name="EMPLEADO_PROFESION_FK">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>EC07A0A4-FCC3-4C88-3315-2B44D4B32DBD</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="46F1AD71-CECD-4F17-E456-DBC79989D537"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

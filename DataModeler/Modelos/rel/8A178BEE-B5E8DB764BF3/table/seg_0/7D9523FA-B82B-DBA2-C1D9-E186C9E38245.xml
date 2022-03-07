@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7D9523FA-B82B-DBA2-C1D9-E186C9E38245" name="DIAGNOSTICO-EVALUACION">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>40A5F564-80AF-9607-EFFF-EA1D96340B8E</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idDiagnosticoEvaluacion" id="266A7EDD-CDD0-1C3E-E5AA-CA86D8FB8A4B">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>01C5E4EC-4572-FE62-025E-802D06140C75</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RangoDiagnostico" id="DFB8E599-7337-8D3A-67AF-660A0A91C9D5">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>067021DB-4876-BA66-9B1C-915C0A7C2444</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EVALUACION_idEvaluacion" id="BC571BFE-5105-63F4-0DF9-E75139E4B433">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>3CB6DD3A-6E98-68D8-6437-567D6E14AB0D</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B96B97C8-00A1-FBCF-F157-7568D2767DA1" referredColumn="EC522885-B6BF-C50B-A8AF-4F2125B77568"/>
+</associations>
+</Column>
+<Column name="DIAGNOSTICO_idDiagnostico" id="6973414C-3E88-D273-CFF6-6163950F5DB4">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>2CA4D204-533C-4871-0531-4C75DB6B47F1</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AC1A2ED6-46B0-3FD9-9954-AD4E38C1BF8C" referredColumn="E8D57DDD-EFCB-2FE3-197D-BFC8DF55B642"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F02F37CC-82EF-6006-4C2A-4A7380626A60" name="DIAGNOSTICO-EVALUACION_PK">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>4D88EDEA-9A97-261F-7F54-1065F30EB0F7</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="266A7EDD-CDD0-1C3E-E5AA-CA86D8FB8A4B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="50CE6FAE-0E28-31C4-667D-71230F9BA24E" name="DIAGNOSTICO-EVALUACION_DIAGNOSTICO_FK">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>0690FD9E-62BD-CCC7-10E0-C4FF87B5EE5E</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6973414C-3E88-D273-CFF6-6163950F5DB4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A67EFFC1-4D85-9B4F-848B-B6C57C453099" name="DIAGNOSTICO-EVALUACION_EVALUACION_FK">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:26:21 UTC</createdTime>
+<generatorID>66AA4063-5E27-7B29-0D06-B4608BAF2F97</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BC571BFE-5105-63F4-0DF9-E75139E4B433"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

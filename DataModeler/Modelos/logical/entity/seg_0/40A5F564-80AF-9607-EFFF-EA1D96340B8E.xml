@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="40A5F564-80AF-9607-EFFF-EA1D96340B8E" name="DIAGNOSTICO-EVALUACION">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:06:12 UTC</createdTime>
+<ownerDesignName>Modelos</ownerDesignName>
+<engineerTo>
+<item key="8A178BEE-D57C-945A-4CEF-B5E8DB764BF3" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="idDiagnosticoEvaluacion" id="01C5E4EC-4572-FE62-025E-802D06140C75">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:07:11 UTC</createdTime>
+<ownerDesignName>Modelos</ownerDesignName>
+<engineerTo>
+<item key="8A178BEE-D57C-945A-4CEF-B5E8DB764BF3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="RangoDiagnostico" id="067021DB-4876-BA66-9B1C-915C0A7C2444">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:07:32 UTC</createdTime>
+<ownerDesignName>Modelos</ownerDesignName>
+<engineerTo>
+<item key="8A178BEE-D57C-945A-4CEF-B5E8DB764BF3" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idEvaluacion" id="3CB6DD3A-6E98-68D8-6437-567D6E14AB0D">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:12:19 UTC</createdTime>
+<generatorID>66AA4063-5E27-7B29-0D06-B4608BAF2F97</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<engineerTo>
+<item key="8A178BEE-D57C-945A-4CEF-B5E8DB764BF3" value="true"/>
+</engineerTo>
+<referedAttribute>37E75CD7-97EC-DB84-D65A-730C54116E4F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idDiagnostico" id="2CA4D204-533C-4871-0531-4C75DB6B47F1">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:14:56 UTC</createdTime>
+<generatorID>0690FD9E-62BD-CCC7-10E0-C4FF87B5EE5E</generatorID>
+<ownerDesignName>Modelos</ownerDesignName>
+<engineerTo>
+<item key="8A178BEE-D57C-945A-4CEF-B5E8DB764BF3" value="true"/>
+</engineerTo>
+<referedAttribute>ABE802B5-1E85-3D8A-A939-89192CA6ABEA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4D88EDEA-9A97-261F-7F54-1065F30EB0F7" name="DIAGNOSTICO-EVALUACION PK">
+<createdBy>ldecast</createdBy>
+<createdTime>2022-03-07 06:07:31 UTC</createdTime>
+<ownerDesignName>Modelos</ownerDesignName>
+<engineerTo>
+<item key="8A178BEE-D57C-945A-4CEF-B5E8DB764BF3" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>01C5E4EC-4572-FE62-025E-802D06140C75</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
