@@ -8,16 +8,22 @@ FROM EMPLEADO
 ORDER BY PA.pacientes_atendidos DESC;
 
 ----- 2 -----
-SELECT EMPLEADO.nombre,
+SELECT DISTINCT EMPLEADO.nombre,
     EMPLEADO.apellido,
     EMPLEADO.direccion,
-    PROFESION.titulo
+    PROFESION.titulo,
+    FILT.pacientes_atendidos
 FROM EMPLEADO
     INNER JOIN PROFESION ON PROFESION.idProfesion = EMPLEADO.profesion_idProfesion
-    INNER JOIN "PACIENTES-ATENDIDOS" PA ON PA.idEmpleado = EMPLEADO.idEmpleado AND PA.pacientes_atendidos > 3
-    INNER JOIN (SELECT DISTINCT empleado_idEmpleado FROM EVALUACION
-        WHERE EXTRACT(YEAR FROM EVALUACION.fechaEvaluacion) = 2016) T ON T.empleado_idEmpleado = EMPLEADO.idEmpleado
-WHERE EMPLEADO.genero = 'M';
+    INNER JOIN (
+        SELECT empleado_idempleado idEmpleado, COUNT(DISTINCT paciente_idPaciente) pacientes_atendidos
+        FROM EVALUACION
+        WHERE EXTRACT(YEAR FROM EVALUACION.fechaEvaluacion) = 2016
+        GROUP BY empleado_idEmpleado
+    ) FILT ON FILT.idEmpleado = EMPLEADO.idEmpleado
+WHERE EMPLEADO.genero = 'M'
+    AND FILT.pacientes_atendidos > 3
+ORDER BY FILT.pacientes_atendidos;
 
 ----- 3 -----
 SELECT DISTINCT PACIENTE.nombre,
@@ -59,7 +65,7 @@ FROM PACIENTE
         WHERE EVALUACION.paciente_idPaciente IS NULL
 ORDER BY PT.cantidad_tratamientos DESC;
 
------ 6 -----
+----- 6 ----- pendiente de arreglar
 SELECT DIAGNOSTICO.tipoFumador,
     D.cantidad_asignaciones
 FROM(
@@ -119,7 +125,11 @@ FROM (
 ORDER BY porcentaje DESC;
 
 ----- 11 -----
-SELECT DISTINCT EXTRACT(YEAR FROM EVALUACION.fechaEvaluacion) año, EXTRACT(MONTH FROM EVALUACION.fechaEvaluacion) mes, P.nombre, P.apellido, FILT.tratamientos_aplicados
+SELECT DISTINCT EXTRACT(YEAR FROM EVALUACION.fechaEvaluacion) año,
+    EXTRACT(MONTH FROM EVALUACION.fechaEvaluacion) mes,
+    P.nombre,
+    P.apellido,
+    FILT.tratamientos_aplicados
 FROM EVALUACION
 INNER JOIN PACIENTE P ON P.idPaciente = EVALUACION.paciente_idPaciente
 INNER JOIN (
