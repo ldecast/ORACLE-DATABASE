@@ -92,17 +92,16 @@ AND E.direccion = '1475 Dryden Crossing'
 ORDER BY PA.pacientes_atendidos DESC;
 
 ----- 9 -----
-SELECT E.idEmpleado,
-    E.nombre,
+SELECT E.nombre,
     E.apellido,
-    ROUND((PA.pacientes_atendidos/total_pacientes)*100,4) porcentaje
+    ROUND((PA.pacientes_atendidos/total_pacientes_atendidos)*100,2) porcentaje
 FROM (
     SELECT empleado_idempleado idEmpleado, COUNT(DISTINCT paciente_idPaciente) pacientes_atendidos
     FROM EVALUACION
     WHERE EXTRACT(YEAR FROM fechaEvaluacion) >= 2017
     GROUP BY empleado_idEmpleado
 ) PA,
-(SELECT COUNT(*) total_pacientes FROM PACIENTE),
+(SELECT * FROM "TOTAL-PACIENTES-ATENDIDOS"),
 (SELECT idEmpleado, nombre, apellido FROM EMPLEADO) E
 WHERE E.idEmpleado = PA.idEmpleado
 ORDER BY porcentaje DESC;
@@ -120,25 +119,24 @@ FROM (
 ORDER BY porcentaje DESC;
 
 ----- 11 -----
-SELECT Q.año, Q.mes, P.nombre, P.apellido
-FROM (
-    SELECT EXTRACT(YEAR FROM MIN(PEP.primeraEvaluacion)) año, EXTRACT(MONTH FROM MIN(PEP.primeraEvaluacion)) mes, PEP.idPaciente
-    FROM "PRIMERA-EVALUACION-PACIENTE" PEP,
-    (
+SELECT DISTINCT EXTRACT(YEAR FROM EVALUACION.fechaEvaluacion) año, EXTRACT(MONTH FROM EVALUACION.fechaEvaluacion) mes, P.nombre, P.apellido, FILT.tratamientos_aplicados
+FROM EVALUACION
+INNER JOIN PACIENTE P ON P.idPaciente = EVALUACION.paciente_idPaciente
+INNER JOIN (
+    SELECT * FROM (
         SELECT TP.paciente_idPaciente, COUNT(*) tratamientos_aplicados
         FROM "TRATAMIENTO-PACIENTE" TP
         GROUP BY TP.paciente_idPaciente
         ORDER BY tratamientos_aplicados DESC
-        FETCH FIRST 5 ROWS ONLY
-    ) PMAS,
-    (
+        FETCH FIRST 10 ROWS ONLY
+    )
+    UNION ALL
+    SELECT * FROM (
         SELECT TP.paciente_idPaciente, COUNT(*) tratamientos_aplicados
         FROM "TRATAMIENTO-PACIENTE" TP
         GROUP BY TP.paciente_idPaciente
         ORDER BY tratamientos_aplicados ASC
-        FETCH FIRST 5 ROWS ONLY
-    ) PMENOS
-    WHERE (PMAS.paciente_idPaciente = PEP.idPaciente OR PMENOS.paciente_idPaciente = PEP.idPaciente)
-    GROUP BY PEP.idPaciente
-) Q
-INNER JOIN PACIENTE P ON P.idPaciente = Q.idPaciente;
+        FETCH FIRST 10 ROWS ONLY
+    )
+) FILT ON FILT.paciente_idPaciente = EVALUACION.paciente_idPaciente
+ORDER BY FILT.tratamientos_aplicados DESC;
