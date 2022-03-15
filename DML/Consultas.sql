@@ -1,3 +1,5 @@
+/********** REPORTERÍA **********/
+
 ----- 1 -----
 SELECT EMPLEADO.nombre,
     EMPLEADO.apellido,
@@ -65,17 +67,23 @@ FROM PACIENTE
         WHERE EVALUACION.paciente_idPaciente IS NULL
 ORDER BY PT.cantidad_tratamientos DESC;
 
------ 6 ----- pendiente de arreglar
+----- 6 -----
 SELECT DIAGNOSTICO.tipoFumador,
-    D.cantidad_asignaciones
-FROM(
-        SELECT DE.diagnostico_idDiagnostico, DE.rangoDiagnostico, COUNT(*) cantidad_asignaciones
+    FILT.cantidad_sintomas
+FROM (
+    SELECT D.diagnostico_idDiagnostico,
+    COUNT(DISTINCT EVALUACION.sintoma_idSintoma) cantidad_sintomas
+    FROM(
+        SELECT DE.diagnostico_idDiagnostico, DE.evaluacion_idEvaluacion
         FROM "DIAGNOSTICO-EVALUACION" DE
-        GROUP BY DE.diagnostico_idDiagnostico, DE.rangoDiagnostico
-        HAVING DE.rangoDiagnostico = 9
+        WHERE DE.rangoDiagnostico = 9
+        GROUP BY DE.diagnostico_idDiagnostico, DE.evaluacion_idEvaluacion
     ) D
-    INNER JOIN DIAGNOSTICO ON DIAGNOSTICO.idDiagnostico = D.diagnostico_idDiagnostico
-ORDER BY D.cantidad_asignaciones DESC;
+    INNER JOIN EVALUACION ON EVALUACION.idEvaluacion = D.evaluacion_idEvaluacion
+    GROUP BY D.diagnostico_idDiagnostico
+) FILT
+INNER JOIN DIAGNOSTICO ON DIAGNOSTICO.idDiagnostico = FILT.diagnostico_idDiagnostico
+ORDER BY FILT.cantidad_sintomas DESC;
 
 ----- 7 -----
 SELECT DISTINCT P.nombre,
