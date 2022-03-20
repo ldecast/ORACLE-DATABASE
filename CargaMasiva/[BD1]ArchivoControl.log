@@ -1,0 +1,72 @@
+
+SQL*Loader: Release 21.0.0.0.0 - Production on Sun Mar 20 00:33:42 2022
+Version 21.5.0.0.0
+
+Copyright (c) 1982, 2022, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   [BD1]ArchivoControl.ctl
+Character Set UTF8 specified for all input.
+
+Data File:      BIG_SMOKE_DATA.csv
+  Bad File:     BIG_SMOKE_DATA.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 1
+Errors allowed: 50
+Bind array:     250 rows, maximum of 1048576 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table TEMPORAL, loaded from every logical record.
+Insert option in effect for this table: TRUNCATE
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+NOMBRE_EMPLEADO                     FIRST     *   ;       CHARACTER            
+APELLIDO_EMPLEADO                    NEXT     *   ;       CHARACTER            
+DIRECCION_EMPLEADO                   NEXT     *   ;       CHARACTER            
+TELEFONO_EMPLEADO                    NEXT     *   ;       CHARACTER            
+GENERO_EMPLEADO                      NEXT     *   ;       CHARACTER            
+FECHA_NACIMIENTO_EMPLEADO            NEXT     *   ;       DATE YYYY-MM-DD      
+TITULO_DEL_EMPLEADO                  NEXT     *   ;       CHARACTER            
+NOMBRE_PACIENTE                      NEXT     *   ;       CHARACTER            
+APELLIDO_PACIENTE                    NEXT     *   ;       CHARACTER            
+DIRECCION_PACIENTE                   NEXT     *   ;       CHARACTER            
+TELEFONO_PACIENTE                    NEXT     *   ;       CHARACTER            
+GENERO_PACIENTE                      NEXT     *   ;       CHARACTER            
+FECHA_NACIMIENTO_PACIENTE            NEXT     *   ;       DATE YYYY-MM-DD      
+ALTURA                               NEXT     *   ;       CHARACTER            
+PESO                                 NEXT     *   ;       CHARACTER            
+FECHA_EVALUACION                     NEXT     *   ;       DATE YYYY-MM-DD      
+SINTOMA_DEL_PACIENTE                 NEXT     *   ;       CHARACTER            
+DIAGNOSTICO_DEL_SINTOMA              NEXT     *   ;       CHARACTER            
+RANGO_DEL_DIAGNOSTICO                NEXT     *   ;       CHARACTER            
+FECHA_TRATAMIENTO                    NEXT     *   ;       DATE YYYY-MM-DD      
+TRATAMIENTO_APLICADO                 NEXT     *   ;       CHARACTER            
+
+value used for ROWS parameter changed from 250 to 193
+
+Table TEMPORAL:
+  126333 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                1045674 bytes(193 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          1
+Total logical records read:        126333
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Sun Mar 20 00:33:42 2022
+Run ended on Sun Mar 20 00:36:05 2022
+
+Elapsed time was:     00:02:22.51
+CPU time was:         00:00:02.15
